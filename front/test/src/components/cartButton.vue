@@ -3,7 +3,7 @@
         <button
             v-if="!active"
             class="in-cart"
-            @click="inCart()"
+            @click="inCart(); postCount()"
         >
             <img src="/img/status-block-cart.png" alt="status-block-cart" class="cart-img">
             <div class="cart-text">В заказ</div>
@@ -12,16 +12,15 @@
             v-if="active"
             class="active-button"
         >
-            <button @click="transformAmount('-')">
+            <button @click="transformAmount('-'); postCount()">
                 <img src="/img/cartMinus.png" alt="cartMinus">
             </button>
             <div class="count">
                 {{ count }} {{ word }}
             </div>
-            <button @click="transformAmount('+')">
+            <button @click="transformAmount('+'); postCount()">
                 <img src="/img/cartPlus.png" alt="cartPlus">
             </button>
-
         </button>
     </div>
 </template>
@@ -64,6 +63,11 @@ export default {
                     this.count += 1
                 }
             }
+        },
+        postCount () {
+            this.$emit('postCount', {
+                count: this.count
+            })
         }
     }
 }

@@ -13,7 +13,9 @@
             </div>
             <div class="items-in-bottom">
                 <div class="card-price">{{ smallCard.price }}</div>
-                <cartButton />
+                <cartButton
+                    @postCount="productCount"
+                />
             </div>
         </div>
     </div>
@@ -25,6 +27,17 @@ import cartButton from "@/components/cartButton";
 
 export default {
     name: "smallCardProduct.vue",
+    data () {
+        return {
+            amount: 0
+        }
+    },
+    methods: {
+        productCount (count) {
+            console.log(count)
+            console.log(this.smallCard.id)
+        }
+    },
     components: {
         cartButton
     },

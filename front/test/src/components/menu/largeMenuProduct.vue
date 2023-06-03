@@ -32,7 +32,9 @@
             </div>
             <div class="items-in-bottom">
                 <div class="card-price">{{ largeCard.price }}</div>
-                <cartButton/>
+                <cartButton
+                    @postCount="productCount"
+                />
             </div>
         </div>
     </div>
@@ -43,6 +45,12 @@ import cartButton from "@/components/cartButton";
 
 export default {
     name: "largeMenuProduct",
+    methods: {
+        productCount (count) {
+            console.log(count)
+            console.log(this.largeCard.id)
+        }
+    },
     components: {
         cartButton
     },
