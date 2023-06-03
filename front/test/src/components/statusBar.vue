@@ -16,13 +16,7 @@
                 </router-link>
             </div>
             <div class="user-function-box">
-                <router-link to="/" class="cart-box">
-                    <img src="/img/status-block-cart.png" alt="status-block-cart" class="user-cart-img">
-                    <div class="cart-text">Ваш заказ</div>
-                    <div class="cart-price">
-                        9450 ₽
-                    </div>
-                </router-link>
+                <person-cart-box />
                 <router-link to="/" class="favorites-box">
                     <img src="/img/status-block-favorites.png" alt="status-block-favorites"
                          class="user-favorites-img">
@@ -36,8 +30,15 @@
 </template>
 
 <script>
+
+import personCartBox from "@/components/personCartBox.vue";
+
 export default {
-    name: "statusBar"
+    name: "statusBar",
+    components: {
+        personCartBox
+    }
+
 }
 </script>
 
@@ -79,37 +80,6 @@ export default {
     .user-function-box {
         display: flex;
         align-items: center;
-
-        .cart-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #FF6B17;
-            border-radius: 50px;
-            padding: 6px 5px 6px 10px;
-            @include inter-600;
-            font-size: 16px;
-            line-height: 20px;
-            color: white;
-            margin-right: 20px;
-            text-decoration: none;
-
-            .user-cart-img {
-                width: 20px;
-                height: 20px;
-            }
-
-            .cart-text {
-                margin: 0 7px;
-            }
-
-            .cart-price {
-                background: white;
-                color: #FF6B17;
-                padding: 2px 7px;
-                border-radius: 22px;
-            }
-        }
 
         .favorites-box {
             display: flex;
