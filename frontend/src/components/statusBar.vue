@@ -31,7 +31,7 @@
 
 <script>
 
-import personCartBox from "@/components/personCartBox.vue";
+import personCartBox from "@/components/cart/personCartBox.vue";
 
 export default {
     name: "statusBar",

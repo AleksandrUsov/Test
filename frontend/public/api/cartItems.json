@@ -1,0 +1,13 @@
+{
+    "cartItems": [
+        {
+            "id": 1,
+            "img": "/img/test-cart-img.png",
+            "title": "Бокс «Девичник», L",
+            "gradeStars": "/img/stars.png",
+            "gradeText": "4.8",
+            "price": "3 150 ₽",
+            "count": 3
+        }
+    ]
+}

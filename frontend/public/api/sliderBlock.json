@@ -9,39 +9,49 @@
             "sliderBlockComponentsData": {
                 "sliderCards": [
                     {
+                        "id": 1,
                         "img": "/img/slider-card-1.png",
                         "title": "Toucas, Vinho Verde DOC, 2021",
                         "desc": "Португалия, белое полусухое 9,5%",
                         "price": "1900 ₽",
-                        "stopList": false
+                        "stopList": false,
+                        "count": 0
                     },
                     {
+                        "id": 2,
                         "img": "/img/slider-card-2.png",
                         "title": "Pago Casa Gran, Falcata White, Valencia DO, 2021",
                         "desc": "Португалия, белое полусухое 9,5%",
                         "price": "1950 ₽",
-                        "stopList": true
+                        "stopList": true,
+                        "count": 0
                     },
                     {
+                        "id": 3,
                         "img": "/img/slider-card-3.png",
                         "title": "Belguardo Vermentino, Toscana IGT, 2020",
                         "desc": "Португалия, белое полусухое 9,5%",
                         "price": "2000 ₽",
-                        "stopList": false
+                        "stopList": false,
+                        "count": 0
                     },
                     {
+                        "id": 4,
                         "img": "/img/slider-card-4.png",
                         "title": "Loveblock Pinot Gris, 2020",
                         "desc": "Португалия, белое полусухое 9,5%",
                         "price": "13 000 ₽",
-                        "stopList": true
+                        "stopList": true,
+                        "count": 0
                     },
                     {
+                        "id": 5,
                         "img": "/img/slider-card-1.png",
                         "title": "Toucas, Vinho Verde DOC, 2021",
                         "desc": "Португалия, белое полусухое 9,5%",
                         "price": "1900 ₽",
-                        "stopList": false
+                        "stopList": false,
+                        "count": 0
                     }
                 ]
             }

@@ -14,7 +14,7 @@
             v-else
         >
             <button
-                v-if="!active"
+                v-if="count === 0"
                 class="in-cart"
                 @click="inCart(); postCount()"
             >
@@ -22,7 +22,7 @@
                 <div class="cart-text">В заказ</div>
             </button>
             <button
-                v-if="active"
+                v-else
                 class="active-button"
             >
                 <button @click="transformAmount('-'); postCount()">
@@ -44,36 +44,21 @@ export default {
     name: "cartButton",
     data () {
         return {
-            active: false,
-            count: 0,
-            word: '',
+            count: this.amount,
             message: 'Вы выбрали максимальное кол-во одинаковых товаров'
         }
     },
     methods: {
         inCart () {
-            this.active = true
             this.count = 1
-            this.word = 'набор'
         },
         transformAmount (action) {
             if (action === '-') {
-                if (this.count === 1) {
-                    this.active = false
-                    this.count -= 1
-                } else if (this.count > 2 && this.count <= 4){
-                    this.word = 'набора'
-                    this.count -= 1
-                } else {
-                    this.word = 'набор'
-                    this.count -= 1
-                }
-
+                this.count -= 1
             } else if (action === '+') {
-                if (this.count >= 4) {
+                if (this.count === 4) {
                     console.log(this.message)
-                } else if (this.count >= 1 && this.count < 5){
-                    this.word = 'набора'
+                } else {
                     this.count += 1
                 }
             }
@@ -82,9 +67,20 @@ export default {
             this.$emit('postCount', {
                 count: this.count
             })
+        },
+    },
+    computed: {
+        word: function () {
+            if (this.count === 0) {
+                return ''
+            } else if (this.count === 1) {
+                return 'набор'
+            } else  {
+                return 'набора'
+            }
         }
     },
-    props: ['stopList']
+    props: ['stopList', 'amount'],
 }
 </script>
 

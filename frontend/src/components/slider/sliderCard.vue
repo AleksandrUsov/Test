@@ -10,6 +10,8 @@
                 <div class="card-price">{{ slide.price }}</div>
                 <cartButton
                     :stopList="slide.stopList"
+                    :amount="slide.count"
+                    @postCount="productCount"
                 />
             </div>
         </div>
@@ -23,6 +25,12 @@ export default {
     props: ['slide'],
     components: {
         cartButton
+    },
+    methods: {
+        productCount (count) {
+            console.log(this.slide.id)
+            console.log(count)
+        }
     }
 }
 </script>

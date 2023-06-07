@@ -34,6 +34,7 @@
                 <div class="card-price">{{ largeCard.price }}</div>
                 <cartButton
                     :stopList="largeCard.stopList"
+                    :amount="largeCard.count"
                     @postCount="productCount"
                 />
             </div>
@@ -48,8 +49,8 @@ export default {
     name: "largeMenuProduct",
     methods: {
         productCount (count) {
-            console.log(count)
             console.log(this.largeCard.id)
+            console.log(count)
         }
     },
     components: {

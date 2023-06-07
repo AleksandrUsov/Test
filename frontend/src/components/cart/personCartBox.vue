@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "src/assets/styles/global";
+@import "../../assets/styles/global";
 .cart-box {
     display: flex;
     align-items: center;

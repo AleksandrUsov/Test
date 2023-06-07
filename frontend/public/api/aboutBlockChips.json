@@ -1,0 +1,9 @@
+{
+    "chips": {
+        "chip": [
+            {"img": "/img/info-chip-icon-1.png", "desc": "Заказать не позднее чем за:", "span": " 3 часа"},
+            {"img": "/img/info-chip-icon-2.png", "desc": "Минимальный заказ:", "span": " 5000 ₽"},
+            {"img": "/img/info-chip-icon-3.png", "desc": "Доставка:", "span": " бесплатно", "class": "delivery"}
+        ]
+    }
+}

@@ -10,7 +10,7 @@
                 "chips": [
                     {"img": "/img/info-chip-icon-1.png", "desc": "Заказать не позднее чем за:", "span": " 3 часа"},
                     {"img": "/img/info-chip-icon-2.png", "desc": "Минимальный заказ:", "span": " 5000 ₽"},
-                    {"img": "/img/info-chip-icon-3.png", "desc": "Доставка:", "span": " бесплатно"}
+                    {"img": "/img/info-chip-icon-3.png", "desc": "Доставка:", "span": " бесплатно", "class": "delivery"}
                 ],
                 "smallCards": [
                     {
@@ -19,7 +19,8 @@
                         "desc": "Вкус: соль",
                         "price": "120 ₽",
                         "id": 1,
-                        "stopList": false
+                        "stopList": false,
+                        "count": 0
                     },
                     {
                         "img": "/img/small-card-img-2.png",
@@ -27,7 +28,8 @@
                         "desc": "Кусочками",
                         "price": "250 ₽",
                         "id": 2,
-                        "stopList": true
+                        "stopList": true,
+                        "count": 0
                     },
                     {
                         "img": "/img/small-card-img-3.png",
@@ -35,7 +37,8 @@
                         "desc": "Нут, тахини, винный уксус, кумин, паприка, бастурма",
                         "price": "200 ₽",
                         "id": 3,
-                        "stopList": false
+                        "stopList": false,
+                        "count": 0
                     },
                     {
                         "img": "/img/small-card-img-4.png",
@@ -43,7 +46,8 @@
                         "desc": "Сливочный сыр, копченый лосось, лисонный сок",
                         "price": "170 ₽",
                         "id": 4,
-                        "stopList": true
+                        "stopList": true,
+                        "count": 0
                     }
                 ]
             }
@@ -58,7 +62,7 @@
                 "chips": [
                     {"img": "/img/info-chip-icon-1.png", "desc": "Заказать не позднее чем за:", "span": " 2 часа"},
                     {"img": "/img/info-chip-icon-2.png", "desc": "Минимальный заказ:", "span": " 3000 ₽"},
-                    {"img": "/img/info-chip-icon-3.png", "desc": "Доставка:", "span": " 500 ₽"}
+                    {"img": "/img/info-chip-icon-3.png", "desc": "Доставка:", "span": " 500 ₽", "class": "delivery"}
                 ],
                 "largeCards": [
                     {
@@ -71,7 +75,8 @@
                         "desc": "Ассорти мясных деликатесов, ассорти сыров и антипасти, хлебная корзина, парфе из птицы с фисташкой, гуаккамоле, хумус с брезаолой, риет из",
                         "price": "4000 ₽",
                         "id": 1,
-                        "stopList": false
+                        "stopList": false,
+                        "count": 0
                     },
                     {
                         "img1": "/img/big-card-img-1-1.png",
@@ -82,7 +87,8 @@
                         "desc": "Багет, ржанная чиабатта, вафли, гриссини, мусс из цветной капусты с беконом, паштет с вишневым конфи, ассорти сыров и мясных",
                         "price": "2375 ₽",
                         "id": 2,
-                        "stopList": true
+                        "stopList": true,
+                        "count": 0
                     }
                 ]
             }

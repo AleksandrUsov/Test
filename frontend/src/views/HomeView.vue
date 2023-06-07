@@ -59,8 +59,8 @@ export default {
         ...mapActions('sliderBlock', ['GET_SLIDER'])
     },
     created() {
-        this.GET_MENU()
-        this.GET_SLIDER()
+        this.GET_MENU();
+        this.GET_SLIDER();
     }
 }
 </script>
