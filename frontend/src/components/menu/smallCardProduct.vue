@@ -35,8 +35,8 @@ export default {
     },
     methods: {
         productCount (count) {
-            console.log(count)
             console.log(this.smallCard.id)
+            console.log(count)
         }
     },
     components: {

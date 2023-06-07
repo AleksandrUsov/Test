@@ -9,6 +9,7 @@
             "sliderBlockComponentsData": {
                 "sliderCards": [
                     {
+                        "id": 1,
                         "img": "/img/slider-card-1.png",
                         "title": "Toucas, Vinho Verde DOC, 2021",
                         "desc": "Португалия, белое полусухое 9,5%",
@@ -16,6 +17,7 @@
                         "stopList": false
                     },
                     {
+                        "id": 2,
                         "img": "/img/slider-card-2.png",
                         "title": "Pago Casa Gran, Falcata White, Valencia DO, 2021",
                         "desc": "Португалия, белое полусухое 9,5%",
@@ -23,6 +25,7 @@
                         "stopList": true
                     },
                     {
+                        "id": 3,
                         "img": "/img/slider-card-3.png",
                         "title": "Belguardo Vermentino, Toscana IGT, 2020",
                         "desc": "Португалия, белое полусухое 9,5%",
@@ -30,6 +33,7 @@
                         "stopList": false
                     },
                     {
+                        "id": 4,
                         "img": "/img/slider-card-4.png",
                         "title": "Loveblock Pinot Gris, 2020",
                         "desc": "Португалия, белое полусухое 9,5%",
@@ -37,6 +41,7 @@
                         "stopList": true
                     },
                     {
+                        "id": 5,
                         "img": "/img/slider-card-1.png",
                         "title": "Toucas, Vinho Verde DOC, 2021",
                         "desc": "Португалия, белое полусухое 9,5%",

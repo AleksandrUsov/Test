@@ -48,8 +48,8 @@ export default {
     name: "largeMenuProduct",
     methods: {
         productCount (count) {
-            console.log(count)
             console.log(this.largeCard.id)
+            console.log(count)
         }
     },
     components: {
