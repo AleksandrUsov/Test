@@ -8,7 +8,7 @@ const menuBlock = {
     actions: {
         async GET_MENU({ commit }) {
             axios
-                .get('/api/menuBlocks.json')
+                .get('/api/menuBlock.json')
                 .then(response => {
                     const data = response.data
                     commit('SET_MENU', data)

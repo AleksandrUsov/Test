@@ -1,7 +1,9 @@
 <template>
     <router-link to="/cart" class="cart-box">
-        <img src="/img/status-block-cart.png" alt="status-block-cart" class="user-cart-img">
-        <div class="cart-text">Ваш заказ</div>
+        <div class="left-part">
+            <img src="/img/status-block-cart.png" alt="status-block-cart" class="user-cart-img">
+            <div class="cart-text">Ваш заказ</div>
+        </div>
         <div class="cart-price">
             9450 ₽
         </div>
@@ -19,7 +21,7 @@ export default {
 .cart-box {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background: #FF6B17;
     border-radius: 50px;
     padding: 6px 5px 6px 10px;
@@ -30,13 +32,18 @@ export default {
     margin-right: 20px;
     text-decoration: none;
 
-    .user-cart-img {
-        width: 20px;
-        height: 20px;
-    }
+    .left-part {
+        display: flex;
+        align-items: center;
 
-    .cart-text {
-        margin: 0 7px;
+        .user-cart-img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .cart-text {
+            margin: 0 7px;
+        }
     }
 
     .cart-price {

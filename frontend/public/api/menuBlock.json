@@ -3,7 +3,7 @@
         {
             "menuBlockData": {
                 "logo": "/img/menuBlock-company-logo-1.png",
-                "companyName": "Футура",
+                "companyName": "Блюда",
                 "isLarge": false
             },
             "menuBlockComponentsData": {
@@ -51,7 +51,7 @@
         {
             "menuBlockData": {
                 "logo": "/img/menuBlock-company-logo-2.png",
-                "companyName": "ProBrbnch",
+                "companyName": "Сеты",
                 "isLarge": true
             },
             "menuBlockComponentsData": {

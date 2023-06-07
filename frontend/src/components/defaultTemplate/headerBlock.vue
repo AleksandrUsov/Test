@@ -2,7 +2,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <router-link to="#" class="header-logo">
+                <router-link to="/" class="header-logo">
                     <img src="/img/header-logo.png" alt="header-logo" class="header-logo">
                 </router-link>
                 <div class="header-social-box">
@@ -19,10 +19,10 @@
                     </div>
                 </div>
                 <nav>
-                    <router-link to="#" class="nav-item">Праздники и события</router-link>
-                    <router-link to="#" class="nav-item">Подарочный сертификат</router-link>
-                    <router-link to="#" class="nav-item">Партнёрам</router-link>
-                    <router-link to="#" class="nav-item">Путеводитель</router-link>
+                    <router-link to="/" class="nav-item">Праздники и события</router-link>
+                    <router-link to="/" class="nav-item">Подарочный сертификат</router-link>
+                    <router-link to="/" class="nav-item">Партнёрам</router-link>
+                    <router-link to="/" class="nav-item">Путеводитель</router-link>
                 </nav>
                 <div class="header-social-box">
                     <div class="social-item b-40 w-36">
