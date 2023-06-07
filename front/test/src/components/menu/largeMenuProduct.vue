@@ -1,5 +1,5 @@
 <template>
-    <div class="largeMenuCard">
+    <div :class="['largeMenuCard', {'stop-list' : largeCard.stopList}]">
         <div class="card-images">
             <template v-if="largeCard.img3">
                 <img :src="largeCard.img1" alt="big-card-img" class="card-img" style="max-width: 210px">
@@ -33,6 +33,7 @@
             <div class="items-in-bottom">
                 <div class="card-price">{{ largeCard.price }}</div>
                 <cartButton
+                    :stopList="largeCard.stopList"
                     @postCount="productCount"
                 />
             </div>
@@ -177,5 +178,8 @@ export default {
 
         }
     }
+}
+.stop-list {
+    filter: grayscale(80%);
 }
 </style>

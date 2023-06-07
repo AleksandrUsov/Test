@@ -1,5 +1,5 @@
 <template>
-    <div class="smallMenuCard">
+    <div :class="['smallMenuCard', {'stop-list' : smallCard.stopList}]">
         <img :src="smallCard.img" alt="small-card-img" class="card-img">
         <div class="card-content">
             <div class="top-and-middle-items">
@@ -14,6 +14,7 @@
             <div class="items-in-bottom">
                 <div class="card-price">{{ smallCard.price }}</div>
                 <cartButton
+                    :stopList="smallCard.stopList"
                     @postCount="productCount"
                 />
             </div>
@@ -102,5 +103,8 @@ export default {
 
         }
     }
+}
+.stop-list {
+    filter: grayscale(80%);
 }
 </style>

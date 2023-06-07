@@ -1,27 +1,41 @@
 <template>
     <div>
-        <button
-            v-if="!active"
-            class="in-cart"
-            @click="inCart(); postCount()"
+        <template
+            v-if="stopList"
         >
-            <img src="/img/status-block-cart.png" alt="status-block-cart" class="cart-img">
-            <div class="cart-text">В заказ</div>
-        </button>
-        <button
-            v-if="active"
-            class="active-button"
+            <button
+                class="in-cart"
+                disabled
+            >
+                <div class="cart-text">Нет в наличии</div>
+            </button>
+        </template>
+        <template
+            v-else
         >
-            <button @click="transformAmount('-'); postCount()">
-                <img src="/img/cartMinus.png" alt="cartMinus">
+            <button
+                v-if="!active"
+                class="in-cart"
+                @click="inCart(); postCount()"
+            >
+                <img src="/img/status-block-cart.png" alt="status-block-cart" class="cart-img">
+                <div class="cart-text">В заказ</div>
             </button>
-            <div class="count">
-                {{ count }} {{ word }}
-            </div>
-            <button @click="transformAmount('+'); postCount()">
-                <img src="/img/cartPlus.png" alt="cartPlus">
+            <button
+                v-if="active"
+                class="active-button"
+            >
+                <button @click="transformAmount('-'); postCount()">
+                    <img src="/img/cartMinus.png" alt="cartMinus">
+                </button>
+                <div class="count">
+                    {{ count }} {{ word }}
+                </div>
+                <button @click="transformAmount('+'); postCount()">
+                    <img src="/img/cartPlus.png" alt="cartPlus">
+                </button>
             </button>
-        </button>
+        </template>
     </div>
 </template>
 
@@ -69,7 +83,8 @@ export default {
                 count: this.count
             })
         }
-    }
+    },
+    props: ['stopList']
 }
 </script>
 
@@ -96,6 +111,9 @@ export default {
         font-size: 16px;
         line-height: 20px;
         color: white;
+    }
+    &:disabled {
+        cursor: default;
     }
 }
 .active-button {
@@ -127,4 +145,5 @@ export default {
         color: #FF6B17;
     }
 }
+
 </style>

@@ -57,28 +57,32 @@ export default {
                                 title: 'Чипсы, 50гр',
                                 desc: 'Вкус: соль',
                                 price: '120 ₽',
-                                id: 1
+                                id: 1,
+                                stopList: false
                             },
                             {
                                 img: '/img/small-card-img-2.png',
                                 title: 'Клубника, 50гр',
                                 desc: 'Кусочками',
                                 price: '250 ₽',
-                                id: 2
+                                id: 2,
+                                stopList: true
                             },
                             {
                                 img: '/img/small-card-img-3.png',
                                 title: 'Печеный хумус с бастурмой, 60гр',
                                 desc: 'Нут, тахини, винный уксус, кумин, паприка, бастурма',
                                 price: '200 ₽',
-                                id: 3
+                                id: 3,
+                                stopList: false
                             },
                             {
                                 img: '/img/small-card-img-4.png',
                                 title: 'Круассаны, 70гр',
                                 desc: 'Сливочный сыр, копченый лосось, лисонный сок',
                                 price: '170 ₽',
-                                id: 4
+                                id: 4,
+                                stopList: true
                             },
                         ],
                     },
@@ -105,7 +109,8 @@ export default {
                                 infoAboutKit: 'На 4 персоны',
                                 desc: 'Ассорти мясных деликатесов, ассорти сыров и антипасти, хлебная корзина, парфе из птицы с фисташкой, гуаккамоле, хумус с брезаолой, риет из',
                                 price: '4000 ₽',
-                                id: 1
+                                id: 1,
+                                stopList: false
                             },
                             {
                                 img1: '/img/big-card-img-1-1.png',
@@ -115,7 +120,8 @@ export default {
                                 infoAboutKit: 'На 2 персоны',
                                 desc: 'Багет, ржанная чиабатта, вафли, гриссини, мусс из цветной капусты с беконом, паштет с вишневым конфи, ассорти сыров и мясных',
                                 price: '2375 ₽',
-                                id: 2
+                                id: 2,
+                                stopList: true
                             },
                         ]
                     },
