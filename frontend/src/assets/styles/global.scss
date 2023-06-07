@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("@/assets/fonts/Inter.ttf");
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url("@/assets/fonts/Montserrat.ttf");
+}
+
+@mixin inter-400 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+@mixin inter-500 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+@mixin inter-600 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+@mixin mont-900 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+@mixin mont-700 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+@mixin chip {
+    background: #F4F6F9;
+    @include inter-400;
+    text-decoration: none;
+    color: #0E254B99;
+}
+@mixin chipHover {
+    color: #0E254B;
+    background: #D5E5FB;
+}
+@mixin card-desc {
+    margin-top: 10px;
+    max-height: 34px;
+    @include inter-400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0E254B99;
+}
+@mixin card-price {
+    @include mont-700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #3485FF;
+}
+@mixin card-title {
+    @include inter-600;
+    font-size: 18px;
+    line-height: 23px;
+}
+@mixin logo-and-name-company {
+
+    display: flex;
+    align-items: center;
+
+    .company-logo {
+        width: 111px;
+        height: 44px;
+        margin-right: 26px;
+    }
+    .company-name {
+        @include mont-700;
+        font-size: 35px;
+        line-height: 43px;
+        color: #0E254B;
+    }
+}
+$containerOnDesktop: 1300px;
+$maxWidthOnDesktop: 1500px;
+
+.container {
+    width: 100%;
+    max-width: $containerOnDesktop;
+    margin: 0 auto;
+}
