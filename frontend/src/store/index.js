@@ -5,6 +5,7 @@ import menuChips from "@/store/modules/menuChips";
 import menuBlock from "@/store/modules/menuBlock";
 import sliderBlock from "@/store/modules/sliderBlock";
 import cartItems from "@/store/modules/cartItems";
+import cartChip from "@/store/modules/cartChip";
 
 Vue.prototype.axios = axios
 
@@ -15,6 +16,7 @@ export default new Vuex.Store({
         menuChips,
         menuBlock,
         sliderBlock,
-        cartItems
+        cartItems,
+        cartChip
     }
 })

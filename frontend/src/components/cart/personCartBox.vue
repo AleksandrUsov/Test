@@ -5,7 +5,7 @@
             <div class="cart-text">Ваш заказ</div>
         </div>
         <div class="cart-price">
-            9450 ₽
+            3150 ₽
         </div>
     </router-link>
 </template>

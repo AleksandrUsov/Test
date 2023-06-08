@@ -8,6 +8,10 @@
                 :cartItem="cartItem"
             />
             <cartMessage />
+            <div class="bottom-items">
+                <cartDeliveryChip />
+                <cartButton />
+            </div>
         </div>
     </div>
 </template>
@@ -16,13 +20,18 @@
 import personCartBox from "@/components/cart/personCartBox";
 import cartItem from "@/components/cart/cartItem";
 import cartMessage from "@/components/cart/cartMessage";
+import cartDeliveryChip from "@/components/cart/cartDeliveryChip";
+import cartButton from "@/components/cart/cartButton";
 import {mapActions, mapState} from "vuex";
+
 export default {
     name: "cartView",
     components: {
         personCartBox,
         cartItem,
-        cartMessage
+        cartMessage,
+        cartDeliveryChip,
+        cartButton
     },
     computed: {
         ...mapState('cartItems', {
@@ -48,10 +57,17 @@ export default {
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            max-width: 500px;
 
             .person-cart-box {
                 margin: 20px 0;
-                width: 500px;
+                width: 100%;
+            }
+            .bottom-items {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
         }
     }

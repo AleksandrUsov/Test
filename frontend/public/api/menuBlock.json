@@ -62,7 +62,7 @@
                 "chips": [
                     {"img": "/img/info-chip-icon-1.png", "desc": "Заказать не позднее чем за:", "span": " 2 часа"},
                     {"img": "/img/info-chip-icon-2.png", "desc": "Минимальный заказ:", "span": " 3000 ₽"},
-                    {"img": "/img/info-chip-icon-3.png", "desc": "Доставка:", "span": " 500 ₽", "class": "delivery"}
+                    {"img": "/img/info-chip-icon-3.png", "desc": "Доставка:", "span": " 500 ₽"}
                 ],
                 "largeCards": [
                     {

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import cartButton from "@/components/cartButton";
+import cartButton from "@/components/cardButton";
 export default {
     name: "sliderCard",
     props: ['slide'],

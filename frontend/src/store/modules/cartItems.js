@@ -11,12 +11,12 @@ const cartItems = {
                 .get('/api/cartItems.json')
                 .then(response => {
                     const data = response.data
-                    commit('GET_CART_ITEMS', data)
+                    commit('SET_CART_ITEMS', data)
                 })
         }
     },
     mutations: {
-        GET_CART_ITEMS (state, data) {
+        SET_CART_ITEMS (state, data) {
             state.cartItems = data.cartItems
         }
     },
