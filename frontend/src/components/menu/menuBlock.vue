@@ -69,9 +69,6 @@ export default {
         justify-content: space-between;
         margin-bottom: 25px;
 
-        .logo-and-name-company {
-            @include logo-and-name-company;
-        }
         .chips-about-order {
             display: flex;
             align-items: center;

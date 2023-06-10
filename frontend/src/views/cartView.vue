@@ -34,9 +34,7 @@ export default {
         cartButton
     },
     computed: {
-        ...mapState('cartItems', {
-            cartItems: 'cartItems'
-        })
+        ...mapState('cartItems', ['cartItems'])
     },
     methods: {
         ...mapActions('cartItems', ['GET_CART_ITEMS'])
@@ -50,7 +48,7 @@ export default {
 <style scoped lang="scss">
     @import "src/assets/styles/global";
     .cart {
-        min-height: 500px;
+        min-height: 100vh;
 
         .container {
             display: flex;

@@ -1,15 +1,13 @@
 <template>
     <div :class="['largeMenuCard', {'stop-list' : largeCard.stopList}]">
         <div class="card-images">
-            <template v-if="largeCard.img3">
-                <img :src="largeCard.img1" alt="big-card-img" class="card-img" style="max-width: 210px">
-                <img :src="largeCard.img2" alt="big-card-img" class="card-img" style="max-width: 210px">
-                <img :src="largeCard.img3" alt="big-card-img" class="card-img" style="max-width: 210px">
-            </template>
-            <template v-else-if="!largeCard.img3">
-                <img :src="largeCard.img1" alt="big-card-img" class="card-img">
-                <img :src="largeCard.img2" alt="big-card-img" class="card-img">
-            </template>
+            <img
+                v-for="(item, index) in largeCard.images"
+                :key="index"
+                :src="item.img"
+                alt="big-card-img"
+                class="card-img"
+            >
         </div>
         <div class="card-content">
             <div class="top-and-middle-items">

@@ -42,5 +42,6 @@ export default {
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: $containerOnDesktop;
+    gap: 20px 0;
 }
 </style>

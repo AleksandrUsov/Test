@@ -39,17 +39,12 @@ export default {
         justify-content: space-between;
         margin-bottom: 30px;
 
-        .logo-and-name-company {
-            @include logo-and-name-company;
-
-
-            .product-count {
-                @include inter-600;
-                font-size: 18px;
-                line-height: 23px;
-                color: #0E254B99;
-                margin-left: 26px;
-            }
+        .product-count {
+            @include inter-600;
+            font-size: 18px;
+            line-height: 23px;
+            color: #0E254B99;
+            margin-left: 26px;
         }
     }
 }

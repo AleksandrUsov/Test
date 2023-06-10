@@ -62,8 +62,16 @@
     font-size: 18px;
     line-height: 23px;
 }
-@mixin logo-and-name-company {
 
+$containerOnDesktop: 1300px;
+$maxWidthOnDesktop: 1500px;
+
+.container {
+    width: 100%;
+    max-width: $containerOnDesktop;
+    margin: 0 auto;
+}
+.logo-and-name-company {
     display: flex;
     align-items: center;
 
@@ -78,12 +86,4 @@
         line-height: 43px;
         color: #0E254B;
     }
-}
-$containerOnDesktop: 1300px;
-$maxWidthOnDesktop: 1500px;
-
-.container {
-    width: 100%;
-    max-width: $containerOnDesktop;
-    margin: 0 auto;
 }

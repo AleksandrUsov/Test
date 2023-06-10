@@ -47,12 +47,8 @@ export default {
         advantagesBlock
     },
     computed: {
-        ...mapState('menuBlock', {
-            menuBlocks: 'menuBlocks'
-        }),
-        ...mapState('sliderBlock', {
-            sliderBlocks: 'sliderBlocks'
-        })
+        ...mapState('menuBlock', ['menuBlocks']),
+        ...mapState('sliderBlock', ['sliderBlocks'])
     },
     methods: {
         ...mapActions('menuBlock', ['GET_MENU']),

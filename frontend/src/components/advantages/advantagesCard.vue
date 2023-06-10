@@ -36,6 +36,7 @@ export default {
     position: relative;
 
 
+
     .card-desc {
         @include inter-600;
         font-size: 18px;
@@ -54,9 +55,6 @@ export default {
     }
     &.blue-card {
         background: #D5E5FB;
-    }
-    &:first-child, &:nth-child(2), &:nth-child(3), {
-        margin-bottom: 20px;
     }
 
 }

@@ -35,7 +35,7 @@ export default {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        height: 476px;
+        height: 100%;
 
         .promo-logo {
             width: 218px;
@@ -43,6 +43,7 @@ export default {
             align-self: flex-end;
             z-index: 1;
         }
+
         .promo-message-block {
             padding: 35px 8px 35px 35px;
             background: rgba(180, 201, 229, 0.2);
@@ -60,6 +61,7 @@ export default {
                 color: white;
                 margin-bottom: 12px;
             }
+
             .desc {
                 @include inter-600;
                 font-size: 18px;
@@ -69,16 +71,15 @@ export default {
             }
         }
     }
+    &:before {
+        content: '';
+        display: block;
+        width: 1498px;
+        height: 476px;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(116, 154, 252, 0.6), rgba(37, 90, 174, 0.2));
+        opacity: .5;
+        border-radius: 30px;
+    }
 }
-.promo-container:before {
-    content: '';
-    display: block;
-    width: 1498px;
-    height: 476px;
-    position: absolute;
-    background: linear-gradient(to bottom, rgba(116, 154, 252, 0.6), rgba(37, 90, 174, 0.2));
-    opacity: .5;
-    border-radius: 30px;
-}
-
 </style>

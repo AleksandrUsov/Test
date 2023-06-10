@@ -66,9 +66,11 @@
                 ],
                 "largeCards": [
                     {
-                        "img1": "/img/big-card-img-2-1.png",
-                        "img2": "/img/big-card-img-2-2.png",
-                        "img3": "/img/big-card-img-2-3.png",
+                        "images": [
+                            {"img": "/img/big-card-img-2-1.png"},
+                            {"img": "/img/big-card-img-2-2.png"},
+                            {"img": "/img/big-card-img-2-3.png"}
+                        ],
                         "chip": "Набор",
                         "title": "Большой набор , 1100гр",
                         "infoAboutKit": "На 4 персоны",
@@ -79,8 +81,10 @@
                         "count": 0
                     },
                     {
-                        "img1": "/img/big-card-img-1-1.png",
-                        "img2": "/img/big-card-img-1-2.png",
+                        "images": [
+                            {"img": "/img/big-card-img-1-1.png"},
+                            {"img": "/img/big-card-img-1-2.png"}
+                        ],
                         "chip": "Набор",
                         "title": "Набор для двоих, 580гр",
                         "infoAboutKit": "На 2 персоны",

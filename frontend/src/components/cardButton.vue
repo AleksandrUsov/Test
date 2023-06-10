@@ -95,7 +95,7 @@ export default {
     border: none;
     cursor: pointer;
     width: 148px;
-    height: 36px;
+    padding: 8px 0;
 
     .cart-img {
         margin-right: 9px;
