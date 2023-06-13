@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->integer('price');
             $table->boolean('stopList');
-            $table->string('img');
+            $table->string('img')->nullable();
             $table->integer('count');
             $table->timestamps();
         });

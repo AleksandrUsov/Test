@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::name('api.dishes.')->prefix('/dishes')->group(function () {
+    Route::get('/', [\App\Http\Controllers\Api\DishController::class, 'index'])->name('index');
+    Route::get('{dish}', [\App\Http\Controllers\Api\DishController::class, 'show'])->name('show');
+});
