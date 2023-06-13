@@ -52,6 +52,7 @@
 
 import chipsAboutOrder from "@/components/menu/chipsAboutOrder";
 import smallCardProduct from "@/components/menu/smallCardProduct";
+import smallCards from "@/store/modules/smallCards";
 /*
 import largeMenuProduct from "@/components/menu/largeMenuProduct";
 */
@@ -65,6 +66,9 @@ export default {
 /*
         largeMenuProduct
 */
+    },
+    created() {
+        console.log(smallCards)
     }
 }
 </script>

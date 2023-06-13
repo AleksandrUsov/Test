@@ -8,7 +8,7 @@ const smallCards = {
     actions: {
         async GET_SMALL_CARDS({ commit }) {
             axios
-                .get('project-back.test/api/dishes')
+                .get('http://project-back.test/api/dishes')
                 .then(response => {
                     const data = response.data
                     commit('SET_SMALL_CARDS', data)
