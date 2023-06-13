@@ -9,6 +9,7 @@
             :key="index"
             :menuBlockData="menuBlock.menuBlockData"
             :menuBlockComponentsData="menuBlock.menuBlockComponentsData"
+            :smallCards="smallCards"
             class="menu-block"
         />
         <div class="container">
@@ -48,15 +49,18 @@ export default {
     },
     computed: {
         ...mapState('menuBlock', ['menuBlocks']),
-        ...mapState('sliderBlock', ['sliderBlocks'])
+        ...mapState('sliderBlock', ['sliderBlocks']),
+        ...mapState('smallCards', ['smallCards'])
     },
     methods: {
         ...mapActions('menuBlock', ['GET_MENU']),
-        ...mapActions('sliderBlock', ['GET_SLIDER'])
+        ...mapActions('sliderBlock', ['GET_SLIDER']),
+        ...mapActions('smallCards', ['GET_SMALL_CARDS'])
     },
     created() {
         this.GET_MENU();
         this.GET_SLIDER();
+        this.GET_SMALL_CARDS();
     }
 }
 </script>

@@ -14,7 +14,14 @@
                     />
                 </div>
             </div>
-            <div class="small-cards"
+            <div class="small-cards">
+                <smallCardProduct
+                    v-for="(smallCard, index) in smallCards"
+                    :key="index"
+                    :smallCard="smallCard"
+                />
+            </div>
+<!--            <div class="small-cards"
                 v-if="!menuBlockData.isLarge"
             >
                 <smallCardProduct
@@ -31,7 +38,7 @@
                     :key="index"
                     :largeCard="largeCard"
                 />
-            </div>
+            </div>-->
             <div class="pagination-block">
                 <button class="more">
                     Показать ещё
@@ -45,15 +52,19 @@
 
 import chipsAboutOrder from "@/components/menu/chipsAboutOrder";
 import smallCardProduct from "@/components/menu/smallCardProduct";
+/*
 import largeMenuProduct from "@/components/menu/largeMenuProduct";
+*/
 
 export default {
     name: "menuBlock",
-    props: ['menuBlockData', 'menuBlockComponentsData'],
+    props: ['menuBlockData', 'menuBlockComponentsData', 'smallCards'],
     components: {
         chipsAboutOrder,
         smallCardProduct,
+/*
         largeMenuProduct
+*/
     }
 }
 </script>
