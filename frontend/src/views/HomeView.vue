@@ -12,7 +12,7 @@
             :smallCards="smallCards"
             class="menu-block"
         />
-        <div class="container">
+<!--        <div class="container">
             <sliderBlock
                 v-for="(sliderBlock, index) in sliderBlocks"
                 :key="index"
@@ -20,7 +20,7 @@
                 :sliderBlockComponents="sliderBlock.sliderBlockComponentsData"
                 class="slider-block"
             />
-        </div>
+        </div>-->
         <advantagesBlock id="advantagesBlock"/>
     </div>
 </template>
@@ -32,7 +32,9 @@ import promoBlock from "@/components/promoBlock";
 import historyStroke from "@/components/historyStroke";
 import categoriesList from "@/components/categoriesList/categoriesList";
 import menuBlock from "@/components/menu/menuBlock";
+/*
 import sliderBlock from "@/components/slider/sliderBlock";
+*/
 import advantagesBlock from "@/components/advantages/advantagesBlock";
 import {mapState, mapActions} from "vuex"
 
@@ -44,22 +46,30 @@ export default {
         historyStroke,
         categoriesList,
         menuBlock,
+/*
         sliderBlock,
+*/
         advantagesBlock
     },
     computed: {
         ...mapState('menuBlock', ['menuBlocks']),
+/*
         ...mapState('sliderBlock', ['sliderBlocks']),
+*/
         ...mapState('smallCards', ['smallCards'])
     },
     methods: {
         ...mapActions('menuBlock', ['GET_MENU']),
-        ...mapActions('sliderBlock', ['GET_SLIDER']),
+// /*
+//         ...mapActions('sliderBlock', ['GET_SLIDER']),
+// */
         ...mapActions('smallCards', ['GET_SMALL_CARDS'])
     },
     created() {
         this.GET_MENU();
+/*
         this.GET_SLIDER();
+*/
         this.GET_SMALL_CARDS();
     }
 }
