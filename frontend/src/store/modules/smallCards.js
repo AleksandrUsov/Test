@@ -8,7 +8,7 @@ const smallCards = {
     actions: {
         async GET_SMALL_CARDS({ commit }) {
             axios
-                .get('/api/menuBlock.json')
+                .get('/api/smallCards.json?limit=8')
                 .then(response => {
                     const data = response.data
                     commit('SET_SMALL_CARDS', data)
@@ -17,7 +17,7 @@ const smallCards = {
     },
     mutations: {
         SET_SMALL_CARDS (state, data) {
-            state.smallCards = data.menuBlocks
+            state.smallCards = data.smallCards
         }
     },
 }

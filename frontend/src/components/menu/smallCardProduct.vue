@@ -39,9 +39,6 @@ export default {
         cartButton
     },
     props: ['smallCard'],
-    created() {
-        console.log(this.smallCard)
-    }
 }
 </script>
 

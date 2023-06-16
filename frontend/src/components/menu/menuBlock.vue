@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-        <!--*-->
         <div
             class="menu-block-content"
         >
@@ -19,35 +18,18 @@
             </div>
             <div class="small-cards">
                 <smallCardProduct
-                    v-for="(smallCard, index) in visibleItems"
+                    v-for="(smallCard, index) in smallCards"
                     :key="index"
                     :smallCard="smallCard"
                     class="card"
-                />
+                >
+                </smallCardProduct>
             </div>
-<!--            <div class="small-cards"
-                v-if="!menuBlockData.isLarge"
-            >
-                <smallCardProduct
-                    v-for="(smallCard, index) in menuBlockComponentsData.smallCards"
-                    :key="index"
-                    :smallCard="smallCard"
-                />
-            </div>
-            <div class="large-cards"
-                v-if="menuBlockData.isLarge"
-            >
-                <largeMenuProduct
-                    v-for="(largeCard, index) in menuBlockComponentsData.largeCards"
-                    :key="index"
-                    :largeCard="largeCard"
-                />
-            </div>-->
-            <div v-if="visibleItems < menuBlockComponentsData.smallCards" class="pagination-block" >
+            <!--            <div v-if="visibleItems < menuBlockComponentsData.smallCards" class="pagination-block" >
                 <button class="more" @click="visibleCards += step">
                     Показать ещё
                 </button>
-            </div>
+            </div>-->
         </div>
     </div>
 </template>
@@ -56,61 +38,18 @@
 
 import chipsAboutOrder from "@/components/menu/chipsAboutOrder";
 import smallCardProduct from "@/components/menu/smallCardProduct";
-/*
-import largeMenuProduct from "@/components/menu/largeMenuProduct";
-*/
 
 export default {
     name: "menuBlock",
-    props: ['menuBlockData', 'menuBlockComponentsData'],
-    data () {
-        return {
-            visibleCards: 4,
-            step: 4,
-        }
-    },
-    computed: {
-        visibleItems() {
-            return this.menuBlockComponentsData.smallCards.slice(0, this.visibleCards)
-        }
-    },
-    methods: {
-        lazyLoad () {
-            console.log(scrollY)
-            let firstStep = 500
-            let isFirst = true
-            let scrollStep = 420
-            window.addEventListener('scroll', () => {
-                console.log(scrollY)
-                if (scrollY > firstStep) {
-                    if (isFirst === true) {
-                        isFirst = false
-                        this.visibleCards += this.step
-                    }
-                    if (scrollY > scrollStep) {
-                        scrollStep += scrollStep
-                        this.visibleCards += this.step
-                    }
-                }
-            })
-            return this.visibleCards
-        }
-    },
+    props: ['menuBlockData', 'menuBlockComponentsData', 'smallCards'],
     components: {
         chipsAboutOrder,
         smallCardProduct,
-/*
-        largeMenuProduct
-*/
     },
-    created() {
-        this.lazyLoad()
-    }
 }
 </script>
 
 <style scoped lang="scss">
-
 @import "src/assets/styles/global";
 
 .menu-block-content {
@@ -133,6 +72,9 @@ export default {
         flex-wrap: wrap;
         gap: 20px 0;
 
+        .card {
+            transition: 2s show ease-in-out;
+        }
     }
     .pagination-block {
         display: flex;
@@ -152,6 +94,4 @@ export default {
         }
     }
 }
-
-
 </style>

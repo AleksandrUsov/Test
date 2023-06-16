@@ -9,6 +9,7 @@
             :key="index"
             :menuBlockData="menuBlock.menuBlockData"
             :menuBlockComponentsData="menuBlock.menuBlockComponentsData"
+            :smallCards="smallCards"
             class="menu-block"
         />
 <!--        <div class="container">
@@ -36,9 +37,6 @@ import sliderBlock from "@/components/slider/sliderBlock";
 */
 import advantagesBlock from "@/components/advantages/advantagesBlock";
 import {mapState, mapActions} from "vuex"
-/*
-import smallCards from "@/store/modules/smallCards";
-*/
 
 export default {
     name: 'HomeView',
@@ -58,33 +56,26 @@ export default {
 /*
         ...mapState('sliderBlock', ['sliderBlocks']),
 */
-/*
         ...mapState('smallCards', ['smallCards'])
-*/
     },
     methods: {
         ...mapActions('menuBlock', ['GET_MENU']),
 // /*
 //         ...mapActions('sliderBlock', ['GET_SLIDER']),
 // */
-/*
         ...mapActions('smallCards', ['GET_SMALL_CARDS'])
-*/
     },
     created() {
         this.GET_MENU();
 /*
         this.GET_SLIDER();
 */
-/*
         this.GET_SMALL_CARDS();
-*/
     }
 }
 </script>
 
 <style scoped lang="scss">
-
     @import "src/assets/styles/global";
 
     #historyStroke {
