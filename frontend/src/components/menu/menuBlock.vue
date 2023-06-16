@@ -1,6 +1,9 @@
 <template>
     <div class="container">
-        <div class="menu-block-content">
+        <!--*-->
+        <div
+            class="menu-block-content"
+        >
             <div class="item-in-top">
                 <div class="logo-and-name-company">
                     <img :src="menuBlockData.logo" alt="menuBlock-company-logo-1" class="company-logo">
@@ -16,9 +19,10 @@
             </div>
             <div class="small-cards">
                 <smallCardProduct
-                    v-for="(smallCard, index) in smallCards"
+                    v-for="(smallCard, index) in visibleItems"
                     :key="index"
                     :smallCard="smallCard"
+                    class="card"
                 />
             </div>
 <!--            <div class="small-cards"
@@ -39,8 +43,8 @@
                     :largeCard="largeCard"
                 />
             </div>-->
-            <div class="pagination-block">
-                <button class="more">
+            <div v-if="visibleItems < menuBlockComponentsData.smallCards" class="pagination-block" >
+                <button class="more" @click="visibleCards += step">
                     Показать ещё
                 </button>
             </div>
@@ -58,13 +62,49 @@ import largeMenuProduct from "@/components/menu/largeMenuProduct";
 
 export default {
     name: "menuBlock",
-    props: ['menuBlockData', 'menuBlockComponentsData', 'smallCards'],
+    props: ['menuBlockData', 'menuBlockComponentsData'],
+    data () {
+        return {
+            visibleCards: 4,
+            step: 4,
+        }
+    },
+    computed: {
+        visibleItems() {
+            return this.menuBlockComponentsData.smallCards.slice(0, this.visibleCards)
+        }
+    },
+    methods: {
+        lazyLoad () {
+            console.log(scrollY)
+            let firstStep = 500
+            let isFirst = true
+            let scrollStep = 420
+            window.addEventListener('scroll', () => {
+                console.log(scrollY)
+                if (scrollY > firstStep) {
+                    if (isFirst === true) {
+                        isFirst = false
+                        this.visibleCards += this.step
+                    }
+                    if (scrollY > scrollStep) {
+                        scrollStep += scrollStep
+                        this.visibleCards += this.step
+                    }
+                }
+            })
+            return this.visibleCards
+        }
+    },
     components: {
         chipsAboutOrder,
         smallCardProduct,
 /*
         largeMenuProduct
 */
+    },
+    created() {
+        this.lazyLoad()
     }
 }
 </script>
@@ -90,6 +130,9 @@ export default {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 30px;
+        flex-wrap: wrap;
+        gap: 20px 0;
+
     }
     .pagination-block {
         display: flex;
