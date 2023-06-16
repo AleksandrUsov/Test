@@ -38,7 +38,10 @@ export default {
     components: {
         cartButton
     },
-    props: ['smallCard']
+    props: ['smallCard'],
+    created() {
+        console.log(this.smallCard)
+    }
 }
 </script>
 
