@@ -25,7 +25,7 @@
                 >
                 </smallCardProduct>
             </div>
-            <!--            <div v-if="visibleItems < menuBlockComponentsData.smallCards" class="pagination-block" >
+            <!--<div v-if="visibleItems < menuBlockComponentsData.smallCards" class="pagination-block" >
                 <button class="more" @click="visibleCards += step">
                     Показать ещё
                 </button>
@@ -41,6 +41,11 @@ import smallCardProduct from "@/components/menu/smallCardProduct";
 
 export default {
     name: "menuBlock",
+    data () {
+        return {
+            page: 'n'
+        }
+    },
     props: ['menuBlockData', 'menuBlockComponentsData', 'smallCards'],
     components: {
         chipsAboutOrder,
